@@ -27,7 +27,10 @@ body {
 body {
     font-family: 'DM Sans';
     font-size: 1.6rem;
+
     text-align: center;
+
+    overflow: overlay; /* sobrepõe a barra de rolagem */
 }
 
 .wrapper {
@@ -166,15 +169,37 @@ nav.scroll svg:nth-child(1) path {
     fill: white;
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
     stroke: white;
 }
 
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 /* ----MENU-EXPANDED--------------------------------------------- */
+body.menu-expanded {
+    overflow: hidden; /* tira o scroll */
+}
+
+body.menu-expanded > :not(nav) { /* aplica para todos menos o nav */
+    display: none;
+}
+
 .menu, 
-.close-menu {
+.close-menu,
+body.menu-expanded .open-menu {
     opacity: 0;
     visibility: hidden;
+}
+
+/* Quando o body estiver com o menu-expanded ele volta o menu, quando está sem ele aplica o de cima*/
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
 }
 
 body.menu-expanded .menu {
@@ -182,8 +207,72 @@ body.menu-expanded .menu {
     top: 0;
     left: 0;
     background: var(--primary-color);
+
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: var(--nav-height);
 }
 
 body.menu-expanded nav {
     position: relative;
+}
+
+.menu ul:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    margin-top: 6rem;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu .button {
+    background: white;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--primary-color);
+
+    display: inline-block;
+    padding: 1.6rem 3.2rem;
+
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded nav button { /* aplicando o botao e o logo um nível acima */
+    position: relative;
+    z-index: 100;
+}
+
+body.menu-expanded .logo path {
+    fill: white;
+}
+
+body.menu-expanded button path {
+    stroke: white;
 }

@@ -5,6 +5,49 @@ onScroll() /* executa a função, pos não esta mais no body */
 function onScroll() { /* gerencia os scrolls da pagina */
     showNavOnScroll()
     showBackToTopButtonOnScroll()
+
+    activateMenuAtCurrentSection(home)
+    activateMenuAtCurrentSection(services)
+    activateMenuAtCurrentSection(about)
+    activateMenuAtCurrentSection(contact)
+}
+
+/* ativa o menu conforme a seção que estiver */
+function activateMenuAtCurrentSection(section) {
+    //linha alvo
+    const targetLine = scrollY + innerHeight / 2
+
+    //verificar se a seção passou da linha
+    //quais dados vou precisar?
+    
+    //o topo da seção
+    const sectionTop = section.offsetTop
+    //a altura da seção
+    const sectionHeight = section.offsetHeight
+    //o topo da seção chegou ou ultrapassou a linha alvo
+    const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+
+    console.log('O topo da seção chegou ou passou da linha?', sectionTopReachOrPassedTargetLine)
+
+    //verificar se a base está abaixo da linha alvo
+    //a seção termina onde?
+    const sectionEndsAt = sectionTop + sectionHeight
+
+    //o final da seção passou da linha alvo
+    const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
+
+    console.log('O fundo da seção passou da linha?', sectionEndPassedTargetLine)
+
+    //limites da seção
+    const sectionBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
+
+    const sectionId = section.getAttribute('id')
+    const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+
+    menuElement.classList.remove('active')
+    if (sectionBoundaries) {
+    menuElement.classList.add('active')
+    }
 }
 
 function showNavOnScroll() { /* mostra o nav ao fazer scroll */

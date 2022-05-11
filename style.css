@@ -407,6 +407,79 @@ body.menu-expanded button path {
     margin-block: 1.6rem;
 }
 
+/* ----DEPOSITIONS--------------------------------------------- */
+#depositions .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#depositions .wrapper .content {
+    display: block;
+    text-align: left;
+    margin-bottom: 4.9rem;
+}
+
+#depositions .wrapper .content .col-a {
+    padding: 3.2rem;
+    margin-bottom: 3.2rem;
+    background-color: var(--brand-beige);
+}
+
+#depositions .wrapper .content .col-b {
+    padding: 3.2rem;
+    background-color: var(--brand-beige);
+}
+
+#depositions .wrapper .content .col-a p {
+    margin-block: 2rem;
+}
+
+#depositions .wrapper .content .col-b p {
+    margin-block: 2rem;
+}
+
+#depositions .wrapper .content .col-a svg:nth-child(4) {
+    width: 12rem;
+    height: 2.8rem;
+    margin-bottom: .8rem;
+    margin-left: 1.3rem;
+}
+
+#depositions .wrapper .content .col-b svg:nth-child(4) {
+    width: 12rem;
+    height: 2.8rem;
+    margin-bottom: .8rem;
+    margin-left: 1.3rem;
+}
+
+#depositions .wrapper .doted {
+    margin-bottom: 10rem;
+}
+
+#depositions .wrapper h3 {
+    margin-top: 10rem;
+    margin-bottom: 4.8rem;
+}
+
+#depositions .wrapper .brands svg:nth-child(1) {
+    margin-bottom: 4rem;
+}
+
+#depositions .wrapper .brands svg:nth-child(2) {
+    margin-bottom: 4rem;
+}
+
+#depositions .wrapper .brands svg:nth-child(3) {
+    margin-bottom: 4rem;
+}
+
+#depositions .wrapper .brands svg:nth-child(4) {
+    margin-bottom: 4rem;
+}
+
+#depositions .wrapper .brands svg:nth-child(5) {
+    margin-bottom: 4rem;
+}
 /* ----ABOUT--------------------------------------------- */
 #about {
     text-align: left;
@@ -723,6 +796,39 @@ footer .social-links {
     #services .card {
         width: 30%;
         flex-grow: 1;
+    }
+
+    /* ----DEPOSITIONS--------------------------------------------- */
+    #depositions .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'A B';
+        
+    }
+
+    #depositions .wrapper h2 {
+        width: 48.1rem;
+        margin-inline: auto;
+    }
+
+    #depositions .wrapper .content {
+        width: 44rem;
+    }
+    
+    #depositions .wrapper .brands {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9rem;
+    }
+
+    #depositions .wrapper .content .col-a {
+        border: 1px solid red;
+        
+    }
+
+    #depositions .wrapper .content .col-b {
+        border: 1px solid red;
+        
     }
 
     /* ----ABOUT--------------------------------------------- */

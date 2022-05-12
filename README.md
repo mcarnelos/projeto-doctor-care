@@ -4,7 +4,8 @@
 # Sobre o projeto
 
 O site Doctor Care foi desenvolvido durante o evento Next Level Week Return da Rocketseat na trilha Origin, foi criado com design totalmente responsivo adaptando-se a 
-qualquer tamanho de tela, e com links para mensagem via whatsapp, e acesso as redes sociais.
+qualquer tamanho de tela, e com links para mensagem via whatsapp, e acesso as redes sociais. Foi construído utilizando HTML, CSS e Javascript, após a conclusão do evento
+foi incluído por mim a seção Depoimentos para colocar em prática os conhecimentos aprendidos.
 
 ## Layout web
 O site pode ser visualizado no seguinte endereço: 

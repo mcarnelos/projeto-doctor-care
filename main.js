@@ -8,6 +8,7 @@ function onScroll() { /* gerencia os scrolls da pagina */
 
     activateMenuAtCurrentSection(home)
     activateMenuAtCurrentSection(services)
+    activateMenuAtCurrentSection(depositions)
     activateMenuAtCurrentSection(about)
     activateMenuAtCurrentSection(contact)
 }

@@ -240,7 +240,7 @@ body.menu-expanded .menu {
     flex-direction: column;
     gap: 4.8rem;
 
-    margin-top: 6rem;
+    margin-top: 3.8rem;
 
     font-weight: 700;
     font-size: 2.4rem;
@@ -457,25 +457,13 @@ body.menu-expanded button path {
     margin-bottom: 4.8rem;
 }
 
-#depositions .wrapper .brands svg:nth-child(1) {
+#depositions .wrapper .brands svg {
+    display: block;
     margin-bottom: 4rem;
+    margin-inline: auto;
+
 }
 
-#depositions .wrapper .brands svg:nth-child(2) {
-    margin-bottom: 4rem;
-}
-
-#depositions .wrapper .brands svg:nth-child(3) {
-    margin-bottom: 4rem;
-}
-
-#depositions .wrapper .brands svg:nth-child(4) {
-    margin-bottom: 4rem;
-}
-
-#depositions .wrapper .brands svg:nth-child(5) {
-    margin-bottom: 4rem;
-}
 /* ----ABOUT--------------------------------------------- */
 #about {
     text-align: left;
@@ -629,7 +617,7 @@ footer .social-links {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 60%; /* ajustando o tamanho da caixa para usar o space-between */
+        width: 70%; /* ajustando o tamanho da caixa para usar o space-between */
     }
 
     nav#navigation .menu ul:nth-child(1) {

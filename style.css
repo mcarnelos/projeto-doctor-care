@@ -408,55 +408,51 @@ body.menu-expanded button path {
 }
 
 /* ----DEPOSITIONS--------------------------------------------- */
-#depositions .wrapper {
+#depositions .content {
     display: flex;
     flex-direction: column;
-}
-
-#depositions .wrapper .content {
-    display: block;
     text-align: left;
     margin-bottom: 4.9rem;
 }
 
-#depositions .wrapper .content .col-a {
+#depositions .content .col-a {
     padding: 3.2rem;
     margin-bottom: 3.2rem;
     background-color: var(--brand-beige);
 }
 
-#depositions .wrapper .content .col-b {
+#depositions .content .col-b {
     padding: 3.2rem;
     background-color: var(--brand-beige);
 }
 
-#depositions .wrapper .content .col-a p {
+#depositions .content .col-a p {
     margin-block: 2rem;
 }
 
-#depositions .wrapper .content .col-b p {
+#depositions .content .col-b p {
     margin-block: 2rem;
 }
 
-#depositions .wrapper .content .col-a svg:nth-child(4) {
+#depositions .content .col-a svg:nth-child(4) {
     width: 12rem;
     height: 2.8rem;
     margin-bottom: .8rem;
     margin-left: 1.3rem;
 }
 
-#depositions .wrapper .content .col-b svg:nth-child(4) {
+#depositions .content .col-b svg:nth-child(4) {
     width: 12rem;
     height: 2.8rem;
     margin-bottom: .8rem;
     margin-left: 1.3rem;
 }
 
-#depositions .wrapper .doted {
+#depositions .doted {
     margin-bottom: 10rem;
 }
 
-#depositions .wrapper h3 {
+#depositions h3 {
     margin-top: 10rem;
     margin-bottom: 4.8rem;
 }
@@ -799,36 +795,21 @@ footer .social-links {
     }
 
     /* ----DEPOSITIONS--------------------------------------------- */
-    #depositions .wrapper {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'A B';
-        
+    #depositions .content {
+        display: flex;
+        flex-direction: row;
+        gap: 3.2rem;
     }
 
     #depositions .wrapper h2 {
         width: 48.1rem;
         margin-inline: auto;
     }
-
-    #depositions .wrapper .content {
-        width: 44rem;
-    }
     
     #depositions .wrapper .brands {
         display: flex;
+        gap: 9.9rem;
         justify-content: center;
-        align-items: center;
-        gap: 9rem;
-    }
-
-    #depositions .wrapper .content .col-a {
-        border: 1px solid red;
-        
-    }
-
-    #depositions .wrapper .content .col-b {
-        border: 1px solid red;
-        
     }
 
     /* ----ABOUT--------------------------------------------- */
